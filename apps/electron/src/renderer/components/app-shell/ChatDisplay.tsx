@@ -975,6 +975,7 @@ export function ChatDisplay({
           onClose={handleCloseOverlay}
           content={overlayState.content}
           title={overlayState.title}
+          theme={isDark ? 'dark' : 'light'}
         />
       )}
 
@@ -985,6 +986,7 @@ export function ChatDisplay({
           onClose={handleCloseOverlay}
           content={overlayData.content}
           title={overlayData.title}
+          theme={isDark ? 'dark' : 'light'}
         />
       )}
     </div>

@@ -23,6 +23,8 @@ export interface GenericOverlayProps {
   onClose: () => void
   /** Optional title to display in the header */
   title?: string
+  /** Theme mode for proper dark/light styling */
+  theme?: 'light' | 'dark'
   /** Enable diff mode for side-by-side comparison */
   diffMode?: boolean
   /** Original content (left side) for diff mode */
@@ -110,6 +112,7 @@ export function GenericOverlay({
   isOpen,
   onClose,
   title = 'Preview',
+  theme,
   diffMode = false,
   originalContent = '',
   modifiedContent = '',
@@ -129,6 +132,7 @@ export function GenericOverlay({
     <PreviewOverlay
       isOpen={isOpen}
       onClose={onClose}
+      theme={theme}
       badge={{
         icon: FileCode,
         label: detectedLanguage,
